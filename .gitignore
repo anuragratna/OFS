@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+
+# Node
+node_modules/
+
+# Python
+__pycache__/
+*.pyc
+
+# VSCode
+.vscode/
+
+# Logs
+*.log
+
+# Env files
+.env
+
+# Build
+/dist/
+/build/
+
+# Others
+*.swp
+.idea/ 
