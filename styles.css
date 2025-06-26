@@ -226,24 +226,41 @@ nav a:hover {
   color: #217a4b;
   margin-bottom: 2.5rem;
 }
-.contact-form {
+.contact-card {
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 24px rgba(33, 122, 75, 0.10);
+  padding: 2.5rem 2rem 2rem 2rem;
   max-width: 500px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
+  margin: 0 auto 2rem auto;
+}
+.contact-label {
+  display: block;
+  margin-bottom: 0.4rem;
+  margin-top: 1.1rem;
+  font-weight: 600;
+  color: #217a4b;
+  font-size: 1.05rem;
 }
 .contact-form input,
 .contact-form textarea {
-  padding: 0.9rem 1.2rem;
-  border: 1px solid #c7e2d2;
+  background: #f8fafb;
+  border: 1.5px solid #c7e2d2;
   border-radius: 0.7rem;
   font-size: 1rem;
   font-family: inherit;
-  resize: none;
+  padding: 0.9rem 1.2rem;
+  margin-bottom: 0.2rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #217a4b;
+  outline: none;
+  box-shadow: 0 0 0 2px #e6f4ea;
 }
 .contact-form button {
-  align-self: flex-end;
+  margin-top: 1.2rem;
 }
 
 .contact-details {

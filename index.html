@@ -94,7 +94,7 @@
     </section>
 
     <!-- Impact/Case Studies -->
-    <section class="impact" id="impact">
+    <!-- <section class="impact" id="impact">
       <div class="container">
         <h2 data-i18n="impact_title">Our Impact</h2>
         <div class="impact-stats">
@@ -115,7 +115,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Contact -->
     <section class="contact" id="contact">
@@ -126,12 +126,17 @@
           <div><span data-i18n="contact_email_label">Email:</span> <a href="mailto:anuragratna@gmail.com">anuragratna@gmail.com</a></div>
         </div>
         <div id="success-bar" style="display:none;position:fixed;top:0;left:0;width:100%;background:#217a4b;color:#fff;text-align:center;padding:1rem 0;font-weight:600;z-index:1000;">Form submitted successfully!</div>
-        <form class="contact-form" action="https://formspree.io/f/movwnlvr" method="POST">
-          <input type="text" name="name" placeholder="Your Name" data-i18n-placeholder="contact_name" required>
-          <input type="email" name="email" placeholder="Your Email" data-i18n-placeholder="contact_email" required>
-          <textarea name="message" placeholder="Your Message" data-i18n-placeholder="contact_message" required></textarea>
-          <button type="submit" class="btn-primary" data-i18n="contact_send">Send Message</button>
-        </form>
+        <div class="contact-card">
+          <form class="contact-form" action="https://formspree.io/f/movwnlvr" method="POST">
+            <label for="name" class="contact-label" data-i18n="contact_name">Your Name</label>
+            <input id="name" type="text" name="name" placeholder="Your Name" data-i18n-placeholder="contact_name" required>
+            <label for="email" class="contact-label" data-i18n="contact_email">Your Email</label>
+            <input id="email" type="email" name="email" placeholder="Your Email" data-i18n-placeholder="contact_email" required>
+            <label for="message" class="contact-label" data-i18n="contact_message">Your Message</label>
+            <textarea id="message" name="message" placeholder="Your Message" data-i18n-placeholder="contact_message" required></textarea>
+            <button type="submit" class="btn-primary" data-i18n="contact_send">Send Message</button>
+          </form>
+        </div>
       </div>
     </section>
   </main>
