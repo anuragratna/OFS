@@ -140,6 +140,9 @@ function setLanguage(lang) {
   if (successBar && successBar.style.display === 'block') {
     successBar.textContent = successMessages[lang];
   }
+  if (window.feather) {
+    feather.replace();
+  }
 }
 
 document.getElementById('lang-en').addEventListener('click', () => setLanguage('en'));
