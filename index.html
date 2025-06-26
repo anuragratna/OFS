@@ -125,10 +125,11 @@
           <div><span data-i18n="contact_phone_label">Phone:</span> <a href="tel:+31683540581">+31 683540581</a></div>
           <div><span data-i18n="contact_email_label">Email:</span> <a href="mailto:anuragratna@gmail.com">anuragratna@gmail.com</a></div>
         </div>
-        <form class="contact-form">
-          <input type="text" placeholder="Your Name" data-i18n-placeholder="contact_name" required>
-          <input type="email" placeholder="Your Email" data-i18n-placeholder="contact_email" required>
-          <textarea placeholder="Your Message" data-i18n-placeholder="contact_message" required></textarea>
+        <div id="success-bar" style="display:none;position:fixed;top:0;left:0;width:100%;background:#217a4b;color:#fff;text-align:center;padding:1rem 0;font-weight:600;z-index:1000;">Form submitted successfully!</div>
+        <form class="contact-form" action="https://formspree.io/f/yourFormID" method="POST">
+          <input type="text" name="name" placeholder="Your Name" data-i18n-placeholder="contact_name" required>
+          <input type="email" name="email" placeholder="Your Email" data-i18n-placeholder="contact_email" required>
+          <textarea name="message" placeholder="Your Message" data-i18n-placeholder="contact_message" required></textarea>
           <button type="submit" class="btn-primary" data-i18n="contact_send">Send Message</button>
         </form>
       </div>

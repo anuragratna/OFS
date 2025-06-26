@@ -77,6 +77,48 @@ const translations = {
   }
 };
 
+// Success bar localization
+const successMessages = {
+  en: "Form submitted successfully!",
+  nl: "Formulier succesvol verzonden!"
+};
+
+const form = document.querySelector('.contact-form');
+const successBar = document.getElementById('success-bar');
+let currentLang = 'en';
+
+function showSuccessBar() {
+  successBar.textContent = successMessages[currentLang];
+  successBar.style.display = 'block';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  setTimeout(() => {
+    successBar.style.display = 'none';
+  }, 5000);
+}
+
+if (form) {
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(response => {
+      if (response.ok) {
+        form.reset();
+        showSuccessBar();
+      } else {
+        alert('There was a problem submitting the form.');
+      }
+    })
+    .catch(() => {
+      alert('There was a problem submitting the form.');
+    });
+  });
+}
+
 function setLanguage(lang) {
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
@@ -93,6 +135,11 @@ function setLanguage(lang) {
   // Update active button
   document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
   document.getElementById('lang-' + lang).classList.add('active');
+  // Update success bar message if visible
+  currentLang = lang;
+  if (successBar && successBar.style.display === 'block') {
+    successBar.textContent = successMessages[lang];
+  }
 }
 
 document.getElementById('lang-en').addEventListener('click', () => setLanguage('en'));
