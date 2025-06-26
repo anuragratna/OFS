@@ -3,62 +3,151 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OneFuture Consulting - ESG for SMEs</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>OFS | Sustainable ESG Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/feather-icons"></script>
 </head>
-<body class="bg-gray-50 font-sans">
-  <header class="bg-green-700 text-white p-6">
-    <div class="container mx-auto flex justify-between items-center">
-      <h1 class="text-2xl font-bold">OneFuture Consulting</h1>
-      <nav class="space-x-6">
-        <a href="#solutions" class="hover:underline">Solutions</a>
-        <a href="#about" class="hover:underline">About</a>
-        <a href="#contact" class="hover:underline">Contact</a>
+<body>
+  <header>
+    <div class="container nav-container">
+      <div class="logo" data-i18n="logo">OFS</div>
+      <nav>
+        <ul>
+          <li><a href="#home" data-i18n="menu_home">Home</a></li>
+          <li><a href="#about" data-i18n="menu_about">About Us</a></li>
+          <li><a href="#approach" data-i18n="menu_approach">Our Approach</a></li>
+          <li><a href="#services" data-i18n="menu_solutions">Solutions</a></li>
+          <li><a href="#impact" data-i18n="menu_impact">Impact</a></li>
+          <li><a href="#resources" data-i18n="menu_resources">Resources</a></li>
+          <li><a href="#contact" data-i18n="menu_contact">Contact</a></li>
+        </ul>
       </nav>
+      <div class="lang-switcher">
+        <button id="lang-en" class="lang-btn active">EN</button> |
+        <button id="lang-nl" class="lang-btn">NL</button>
+      </div>
     </div>
   </header>
 
-  <main class="container mx-auto py-12 px-6">
-    <section class="text-center mb-12">
-      <h2 class="text-3xl font-semibold text-green-700 mb-4"></h2>
-      <p class="text-lg text-gray-700">Affordable. Scalable. Investor-Ready.</p>
-    </section>
-
-    <section id="solutions" class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-      <div class="bg-white p-6 rounded-xl shadow-md">
-        <h3 class="text-xl font-bold text-green-700 mb-2">Simplify CSRD Compliance</h3>
-        <p>Our platform is designed to help SMEs navigate EU CSRD regulations easily and affordably.</p>
-      </div>
-      <div class="bg-white p-6 rounded-xl shadow-md">
-        <h3 class="text-xl font-bold text-green-700 mb-2">Automate ESG Data</h3>
-        <p>We automate your ESG data collection, analysis, and reporting—reducing cost and human error.</p>
-      </div>
-      <div class="bg-white p-6 rounded-xl shadow-md">
-        <h3 class="text-xl font-bold text-green-700 mb-2">Actionable Insights</h3>
-        <p>Our tools provide insights to improve performance and strengthen your position with investors and customers.</p>
-      </div>
-      <div class="bg-white p-6 rounded-xl shadow-md">
-        <h3 class="text-xl font-bold text-green-700 mb-2">Scalable Solutions</h3>
-        <p>Designed to grow with your business and adapt to changing regulations across the EU.</p>
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="container hero-content">
+        <div>
+          <h1 data-i18n="hero_title">Building a Sustainable Future with ESG</h1>
+          <p data-i18n="hero_sub">Empowering businesses to create positive environmental and social impact.</p>
+          <a href="#approach" class="btn-primary" data-i18n="hero_cta">Learn More</a>
+        </div>
+        <div class="hero-img">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Sustainable Earth">
+        </div>
       </div>
     </section>
 
-    <section id="about" class="text-center mb-16">
-      <h3 class="text-2xl font-bold text-green-700 mb-4">Why OneFuture Consulting?</h3>
-      <p class="max-w-2xl mx-auto text-gray-700">
-        We are ESG specialists helping small and medium enterprises thrive in a new era of transparency, sustainability, and compliance. Our modular tools are made to be easy to use, budget-friendly, and tailored for evolving EU standards.
-      </p>
+    <!-- ESG Pillars -->
+    <section class="esg-pillars" id="approach">
+      <div class="container">
+        <h2 data-i18n="esg_title">Our ESG Approach</h2>
+        <div class="pillars">
+          <div class="pillar">
+            <i data-feather="leaf"></i>
+            <h3 data-i18n="pillar_env">Environmental</h3>
+            <p data-i18n="pillar_env_desc">Promoting eco-friendly practices and reducing carbon footprint.</p>
+          </div>
+          <div class="pillar">
+            <i data-feather="users"></i>
+            <h3 data-i18n="pillar_soc">Social</h3>
+            <p data-i18n="pillar_soc_desc">Fostering diversity, equity, and positive community impact.</p>
+          </div>
+          <div class="pillar">
+            <i data-feather="shield"></i>
+            <h3 data-i18n="pillar_gov">Governance</h3>
+            <p data-i18n="pillar_gov_desc">Ensuring transparency, ethics, and responsible leadership.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="contact" class="text-center">
-      <h3 class="text-2xl font-bold text-green-700 mb-4">Get in Touch</h3>
-      <p class="mb-4 text-gray-700">Let’s build your ESG future together. Reach out for a free consultation.</p>
-      <a href="mailto:info@onefutureconsulting.eu" class="inline-block bg-green-700 text-white px-6 py-2 rounded-xl hover:bg-green-800">Contact Us</a>
+    <!-- Solutions/Services -->
+    <section class="services" id="services">
+      <div class="container">
+        <h2 data-i18n="services_title">Our Solutions</h2>
+        <div class="service-cards">
+          <div class="service-card">
+            <i data-feather="bar-chart-2"></i>
+            <h4 data-i18n="service_reporting">ESG Reporting</h4>
+            <p data-i18n="service_reporting_desc">Comprehensive ESG data collection, analysis, and reporting.</p>
+          </div>
+          <div class="service-card">
+            <i data-feather="briefcase"></i>
+            <h4 data-i18n="service_consulting">Consulting</h4>
+            <p data-i18n="service_consulting_desc">Expert guidance to integrate ESG into your business strategy.</p>
+          </div>
+          <div class="service-card">
+            <i data-feather="activity"></i>
+            <h4 data-i18n="service_impact">Impact Assessment</h4>
+            <p data-i18n="service_impact_desc">Measuring and maximizing your positive impact on society and the environment.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact/Case Studies -->
+    <section class="impact" id="impact">
+      <div class="container">
+        <h2 data-i18n="impact_title">Our Impact</h2>
+        <div class="impact-stats">
+          <div class="stat">
+            <i data-feather="globe"></i>
+            <h3>50+</h3>
+            <p data-i18n="impact_projects">Projects Delivered</p>
+          </div>
+          <div class="stat">
+            <i data-feather="award"></i>
+            <h3>20%</h3>
+            <p data-i18n="impact_carbon">Average Carbon Reduction</p>
+          </div>
+          <div class="stat">
+            <i data-feather="smile"></i>
+            <h3>100%</h3>
+            <p data-i18n="impact_satisfaction">Client Satisfaction</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2 data-i18n="contact_title">Contact Us</h2>
+        <div class="contact-details">
+          <div><span data-i18n="contact_phone_label">Phone:</span> <a href="tel:+31683540581">+31 683540581</a></div>
+          <div><span data-i18n="contact_email_label">Email:</span> <a href="mailto:anuragratna@gmail.com">anuragratna@gmail.com</a></div>
+        </div>
+        <form class="contact-form">
+          <input type="text" placeholder="Your Name" data-i18n-placeholder="contact_name" required>
+          <input type="email" placeholder="Your Email" data-i18n-placeholder="contact_email" required>
+          <textarea placeholder="Your Message" data-i18n-placeholder="contact_message" required></textarea>
+          <button type="submit" class="btn-primary" data-i18n="contact_send">Send Message</button>
+        </form>
+      </div>
     </section>
   </main>
 
-  <footer class="bg-gray-200 text-center p-4 text-sm text-gray-600">
-    &copy; 2025 OneFuture Consulting. All rights reserved.
+  <footer>
+    <div class="container footer-content">
+      <div data-i18n="footer_copyright">© 2024 OFS. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="tel:+31683540581"><i data-feather="phone"></i></a>
+        <a href="mailto:anuragratna@gmail.com"><i data-feather="mail"></i></a>
+        <a href="#"><i data-feather="linkedin"></i></a>
+        <a href="#"><i data-feather="twitter"></i></a>
+      </div>
+    </div>
   </footer>
+
+  <script>feather.replace()</script>
+  <script src="lang.js"></script>
 </body>
 </html>
